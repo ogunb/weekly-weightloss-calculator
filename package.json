@@ -1,0 +1,22 @@
+{
+  "name": "weekly-weightloss-calculator",
+  "version": "1.0.0",
+  "description": "with mi fit data.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "calculate": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogunb/weekly-weightloss-calculator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ogunb/weekly-weightloss-calculator/issues"
+  },
+  "homepage": "https://github.com/ogunb/weekly-weightloss-calculator#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
