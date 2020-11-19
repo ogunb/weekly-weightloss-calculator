@@ -1,5 +1,6 @@
 const cvsToJson = require('csvtojson/v2');
 
+const WEEK_DAYS = 7;
 const DATA_PATH = './data';
 const FILE_NAME = process.argv.slice(2);
 cvsToJson({ checkType: true })
@@ -7,7 +8,6 @@ cvsToJson({ checkType: true })
     .then(calculate)
 
 function calculate(data) {
-    const WEEK_DAYS = 7;
     const cleanData = data.filter(({ fatRate }) => !!fatRate).sort((a, b) => a.timestamp - b.timestamp);
     const lastTwoWeeks = cleanData.slice(cleanData.length - (WEEK_DAYS * 2)).map(a => {
         a.timestamp = new Date(a.timestamp * 1000);
