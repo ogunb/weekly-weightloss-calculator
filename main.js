@@ -18,7 +18,7 @@ function calculate(data) {
     const getAverageWeight = (arr) => arr.reduce((total, { weight }) => total + weight, 0) / WEEK_DAYS;
     const lastWeekWeight = getAverageWeight(firstWeek);
     const currentWeight = getAverageWeight(secondWeek);
-    const lostWeight = (lastWeekWeight - currentWeight).toFixed(3) + 'gr';
+    const lostWeight = (lastWeekWeight - currentWeight).toFixed(3) + 'kg';
     console.log(lastTwoWeeks)
     console.log({
         lastWeekWeight,
